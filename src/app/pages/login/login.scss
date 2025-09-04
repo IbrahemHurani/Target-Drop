@@ -1,0 +1,14 @@
+.login {
+  width: min(92vw, 420px);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  padding: clamp(18px, 3vw, 28px);
+  color: var(--text, #eef2ff);
+}
+label { font-weight: 600; }
+.error { color: #ff5b6b; font-weight: 600; }
+.switch { cursor: pointer; color: var(--brand); font-weight: 700; text-align: center; }
+form { display: grid; gap: 8px; }

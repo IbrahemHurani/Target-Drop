@@ -1,0 +1,87 @@
+
+.shell{
+  min-height: 70dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background:
+    radial-gradient(1150px 540px at 85% -20%, rgba(155,92,255,.20), transparent),
+    radial-gradient(1000px 480px at 10% -10%, rgba(255,77,216,.16), transparent),
+    #0d0a1a; 
+}
+
+
+.container{
+  width: min(92vw, var(--container));
+  margin-inline: auto;
+}
+
+
+.app-header{
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg-elev) 85%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  
+  
+}
+.header-inner{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0;
+}
+
+/* Brand (pixel font) */
+.brand{
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(18px, 3vw, 28px);
+  letter-spacing: 1.2px;
+  color: var(--brand);
+  text-shadow:
+    0 2px 0 #0dc9d3,
+    0 0 10px rgba(12, 245, 206, 0.5),
+    0 0 22px rgba(16, 201, 170, 0.25);
+}
+
+
+/* Main */
+.app-main{ 
+    padding: 24px 0 48px; 
+    background:
+    radial-gradient(1150px 540px at 85% -20%, rgba(155,92,255,.20), transparent),
+    radial-gradient(1000px 480px at 10% -10%, rgba(255,77,216,.16), transparent),
+    #0d0a1a; 
+}
+.center-vh{
+  min-height: clamp(350px, 70vh, 780px);
+  display: flex; align-items: center; justify-content: center;
+
+   
+}
+
+/* Footer */
+.app-footer{
+  border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  background: color-mix(in srgb, var(--bg-elev) 85%, transparent);
+  padding: 20px 0;
+  font-size:x-large;
+  color: var(--brand);
+  text-shadow:
+    0 2px 0 #0dc9d3,
+    0 0 10px rgba(12, 245, 206, 0.5),
+    0 0 22px rgba(16, 201, 170, 0.25);
+  
+}
+
+
+.card{
+  background: var(--bg-elev);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  border-radius: var(--radius);
+  padding: clamp(16px, 2vw, 24px);
+  box-shadow: var(--shadow);
+  
+}
+
+a{ color: var(--accent); }
+a:focus-visible{ outline: 2px solid var(--brand); outline-offset: 3px; }
+

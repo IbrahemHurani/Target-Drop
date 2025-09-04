@@ -1,0 +1,21 @@
+<section class="card login">
+  <h2>{{ mode === 'signup' ? 'SignUp' : 'SignIn' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label>Email</label>
+    <input class="input" type="email" formControlName="email" placeholder="name@example.com" />
+
+    <label>Password</label>
+    <input class="input" type="password" formControlName="password" placeholder="******" />
+
+    <button class="btn btn-primary" type="submit" [disabled]="loading || form.invalid">
+      {{ mode === 'signup' ? 'SignUp' : 'SignIn' }}
+    </button>
+  </form>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <a class="switch" (click)="mode = mode === 'signup' ? 'signin' : 'signup'">
+    {{ mode === 'signup' ? 'Already have an account? Sign in' : 'New here? Create account' }}
+  </a>
+</section>

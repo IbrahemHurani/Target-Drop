@@ -1,0 +1,26 @@
+<section class="card game-card">
+  <div class="game-layout">
+    <div class="game-area">
+      <div #board class="board">
+        <div #target class="target"></div>
+        <div #ball class="ball"></div>
+      </div>
+      <div class="controls">
+        <button class="btn btn-primary" (click)="drop()" [disabled]="dropping">Drop</button>
+      </div>
+    </div>
+
+  <aside class="score-panel">
+    <h3>My Scores</h3>
+    <div class="totalScore">Score: <b>{{ totalScore }}</b></div>
+    <div class="last">Drop Score: <b>{{ scoreLast }}</b></div>
+
+    <ul class="score-list">
+      <li *ngFor="let g of recent">
+        <b>{{ g.score }}</b>
+        <span class="muted">— {{ g.createdAt?.toDate?.() | date:'short' }}</span>
+      </li>
+    </ul>
+</aside>
+  </div>
+</section>
